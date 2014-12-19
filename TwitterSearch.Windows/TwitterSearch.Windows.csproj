@@ -128,9 +128,10 @@
     </ApplicationDefinition>
   </ItemGroup>
   <ItemGroup>
-    <Reference Include="Newtonsoft.Json">
-      <HintPath>..\packages\Newtonsoft.Json.6.0.6\lib\netcore45\Newtonsoft.Json.dll</HintPath>
-    </Reference>
+    <ProjectReference Include="..\TwitterSearch.PCL\TwitterSearch.PCL.csproj">
+      <Project>{3b751471-58b0-4a84-b23d-559bcee9a672}</Project>
+      <Name>TwitterSearch.PCL</Name>
+    </ProjectReference>
   </ItemGroup>
   <PropertyGroup Condition=" '$(VisualStudioVersion)' == '' or '$(VisualStudioVersion)' &lt; '12.0' ">
     <VisualStudioVersion>12.0</VisualStudioVersion>

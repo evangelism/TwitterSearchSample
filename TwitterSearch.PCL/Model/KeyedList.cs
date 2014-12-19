@@ -6,7 +6,7 @@ using System.Linq;
 using System.Runtime.CompilerServices;
 using System.Text;
 
-namespace TwitterSearch
+namespace TwitterSearch.PCL
 {
     public class KeyedList<TKey, TItem> : List<TItem>
     {

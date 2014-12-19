@@ -12,10 +12,6 @@
     <Compile Include="$(MSBuildThisFileDirectory)MainPage.xaml.cs">
       <DependentUpon>MainPage.xaml</DependentUpon>
     </Compile>
-    <Compile Include="$(MSBuildThisFileDirectory)Model\KeyedList.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)Model\NotifyBase.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)Model\Tweet.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)Model\TwitterSearchResult.cs" />
   </ItemGroup>
   <ItemGroup>
     <Page Include="$(MSBuildThisFileDirectory)MainPage.xaml">
