@@ -32,7 +32,7 @@
                     </Image.Source>
                 </Image>
                 <TextBlock x:Name="templateAuthor" Text="{Binding Author}" Grid.Row="0" Grid.Column="1"
-                                 Foreground="{StaticResource PhoneAccentBrush}" VerticalAlignment="Top"/>
+                                 VerticalAlignment="Top"/>
 
                 <TextBlock x:Name="templateTweet" Text="{Binding Body}" TextWrapping="Wrap"
                                Grid.Row="1" Grid.Column="1"

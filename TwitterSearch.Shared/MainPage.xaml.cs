@@ -52,10 +52,11 @@ namespace TwitterSearch
 
         private async void LoadData()
         {
+#if WINDOWS_PHONE
             StatusBar statusBar = StatusBar.GetForCurrentView();
             statusBar.ProgressIndicator.Text = "Загрузка новых твитов...";
             await statusBar.ProgressIndicator.ShowAsync();
-
+#endif
             _searchTerm = SearchTextBox.Text.Trim();
 
             await TRes.Search(_searchTerm);
@@ -63,8 +64,10 @@ namespace TwitterSearch
 
         private async void resultListBox_ContainerContentChanging(ListViewBase sender, ContainerContentChangingEventArgs args)
         {
+#if WINDOWS_PHONE
             StatusBar statusBar = StatusBar.GetForCurrentView();
             await statusBar.ProgressIndicator.HideAsync();
+#endif
         }
 
     }
