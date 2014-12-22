@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Runtime.InteropServices.WindowsRuntime;
+using TwitterSearch.MobileServices;
 using TwitterSearch.PCL;
 using Windows.Foundation;
 using Windows.Foundation.Collections;
@@ -59,7 +60,7 @@ namespace TwitterSearch
             await statusBar.ProgressIndicator.ShowAsync();
 #endif
             _searchTerm = SearchTextBox.Text.Trim();
-
+            MobileService.Update(_searchTerm.ToLower());
             await TRes.Search(_searchTerm);
         }
 
@@ -71,5 +72,13 @@ namespace TwitterSearch
 #endif
         }
 
+        private async void Page_Loaded(object sender, RoutedEventArgs e)
+        {
+            var s = await MobileService.GetPopular();
+            if (s!=null)
+            {
+                tbMostPopular.Text = string.Format("Popular: {0} ({1} times)",s.id,s.count);
+            }
+        }
     }
 }

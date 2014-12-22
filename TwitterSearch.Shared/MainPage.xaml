@@ -6,7 +6,7 @@
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d"        
-    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}" Loaded="Page_Loaded"
      >
     <Page.Resources>
         <DataTemplate x:Key="ResultItemTemplate">
@@ -46,6 +46,7 @@
         <Grid.RowDefinitions>
             <RowDefinition Height="Auto"/>
             <RowDefinition Height="*"/>
+            <RowDefinition Height="Auto"/>
         </Grid.RowDefinitions>
 
         <StackPanel Grid.Row="0" Margin="12,17,0,12" >
@@ -60,6 +61,6 @@
                   ItemsSource="{Binding Path=Items}" 
 				  ItemTemplate="{StaticResource ResultItemTemplate}"                                   
                   ContainerContentChanging="resultListBox_ContainerContentChanging" />
-
+        <TextBlock Grid.Row="2" x:Name="tbMostPopular"/>
     </Grid>
 </Page>
